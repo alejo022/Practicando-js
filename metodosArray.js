@@ -2,7 +2,7 @@
 
 console.log("Se crea array de frutas y se aplican metodos")
 
-var frutas = ["Manzana","Pera","Mango"];
+var frutas = ["Manzana", "Pera", "Mango"];
 
 /* Con el  push agregamos un elemento al final del array */
 var AddFinal = frutas.push("Uvas");
@@ -32,7 +32,7 @@ console.log(posicion);
 
 console.log("Se crea array de personas y se les manda un saludo")
 
-var Estudiantes = ["Santiago","Alejandro","Federico","Firulais"];
+var Estudiantes = ["Santiago", "Alejandro", "Federico", "Firulais"];
 
 /* Función para saludar estudiante */
 function SaludarEstudiante(Estudiante) {
@@ -43,17 +43,17 @@ function SaludarEstudiante(Estudiante) {
 console.log(Estudiantes);
 
 console.log("saludando desde un bucle")
-for(var i=0; i<Estudiantes.length;i++) {
+for (var i = 0; i < Estudiantes.length; i++) {
     SaludarEstudiante(Estudiantes[i]);
 }
 
 console.log("saludando desde un ciclo con of")
-for(var estudiante of Estudiantes){
+for (var estudiante of Estudiantes) {
     SaludarEstudiante(estudiante);
 }
 
 console.log("saludando desde un while con shift")
-while(Estudiantes.length > 0){
+while (Estudiantes.length > 0) {
     console.log(Estudiantes);
     var estudiante = Estudiantes.shift();
     SaludarEstudiante(estudiante);
@@ -66,27 +66,27 @@ while(Estudiantes.length > 0){
 /* Un array con objetos - metodos filter - map - mtodos de recorrido */
 
 var articulos = [
-    {nombre: "Libro1", costo: 20},
-    {nombre: "Libro2", costo: 35},
-    {nombre: "Libro3", costo: 45},
-    {nombre: "Libro4", costo: 55},
-    {nombre: "Libro5", costo: 65},
-    {nombre: "Libro6", costo: 85},
-    {nombre: "Libro7", costo: 95},
+    { nombre: "Libro1", costo: 20 },
+    { nombre: "Libro2", costo: 35 },
+    { nombre: "Libro3", costo: 45 },
+    { nombre: "Libro4", costo: 55 },
+    { nombre: "Libro5", costo: 65 },
+    { nombre: "Libro6", costo: 85 },
+    { nombre: "Libro7", costo: 95 },
 ];
 
 console.log(articulos);
 
 
 /* Metodo Filter() */
-var FiltrarArticulo = articulos.filter(function(articulo){
+var FiltrarArticulo = articulos.filter(function (articulo) {
     return articulo.costo < 40
 });
 
 console.log(FiltrarArticulo);
 
 /* Metodo Map() */
-var nombreArticulo = articulos.map(function(articulo){
+var nombreArticulo = articulos.map(function (articulo) {
     return articulo.nombre
 });
 
@@ -94,9 +94,9 @@ console.log(nombreArticulo)
 
 
 /* Metodo find() - metodo validación */
-var encontrarArticulo = articulos.find(function(articulo){
+var encontrarArticulo = articulos.find(function (articulo) {
     return articulo.nombre === "Libro1"
- });
+});
 
 console.log(encontrarArticulo);
 
@@ -104,14 +104,14 @@ console.log(encontrarArticulo);
 /* Metodo foreach() - para recorrer el array */
 var recorrerArray = articulos
 
-articulos.forEach(function(articulo){
-    console.log(articulo.nombre)    
+articulos.forEach(function (articulo) {
+    console.log(articulo.nombre)
 })
 
 
 /* Metodo Some() - nos reguesa validacion verdadero o false para el que la cumple */
-var ArticulosBarato = articulos.some(function(articulo){
-    return articulo.costo <=50
+var ArticulosBarato = articulos.some(function (articulo) {
+    return articulo.costo <= 50
 });
 
 console.log(ArticulosBarato);
@@ -119,21 +119,3 @@ console.log(ArticulosBarato);
 
 
 
-/* Número random - aleatorio de un rango de numeros */
-
-let min = 10;
-let max = 40;
-
-let numRandom = Math.floor(Math.random() * (max - min + 1) + min);
-
-console.log("El numero aleatorio entre " + min + " y " + max + " es: " + numRandom);
-
-
-
-function aleatorio(minimo, maximo){
-   return Math.floor(Math.random() * (maximo - minimo + 1) + minimo);
-}
-let resultado = aleatorio(1,3);
-console.log("oe"+resultado);
-
-/* ------------------------------------------------------------------------------------------------- */
